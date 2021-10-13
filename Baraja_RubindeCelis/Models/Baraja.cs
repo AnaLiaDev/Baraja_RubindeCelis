@@ -20,8 +20,7 @@ namespace Baraja_RubindeCelis.Models
         public string NombreNaipe { get; set; } //escribir prop y tab tab para que se cree automaticamente
 
         [Url]
-        [Required] // Sea obligatorio
-        [StringLength(300, MinimumLength = 2, ErrorMessage = "Por favor ingrese entre 2 y 300 caracteres")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "{0} es requerido")] // Sea obligatorio
         [Display(Name = "Link de la carta")]
         public string LinkNaipe { get; set; } //escribir prop y tab tab para que se cree automaticamente
     }
